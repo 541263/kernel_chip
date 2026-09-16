@@ -1,0 +1,97 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Kernel Chip",
+        "description": "Enter the device IP address and password from the device web interface.",
+        "data": {
+          "host": "Host (IP address)",
+          "password": "Password",
+          "name": "Name"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Failed to connect to the device. Check the host and network.",
+      "invalid_auth": "Invalid response from the device. Check the password.",
+      "unknown": "Unexpected error occurred."
+    },
+    "abort": {
+      "already_configured": "This device is already configured."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Kernel Chip options",
+        "description": "Device has {relay_count} relay(s) and {ssr_count} solid-state output(s). Choose switch or light for each.",
+        "data": {
+          "scan_interval": "Polling interval (seconds)",
+          "relay_1": "Relay 1",
+          "relay_2": "Relay 2",
+          "relay_3": "Relay 3",
+          "relay_4": "Relay 4",
+          "relay_5": "Relay 5",
+          "relay_6": "Relay 6",
+          "relay_7": "Relay 7",
+          "relay_8": "Relay 8",
+          "relay_9": "Relay 9",
+          "relay_10": "Relay 10",
+          "relay_11": "Relay 11",
+          "relay_12": "Relay 12",
+          "ssr_1": "Output 1",
+          "ssr_2": "Output 2",
+          "ssr_3": "Output 3",
+          "ssr_4": "Output 4",
+          "ssr_5": "Output 5",
+          "ssr_6": "Output 6",
+          "ssr_7": "Output 7",
+          "ssr_8": "Output 8",
+          "ssr_9": "Output 9",
+          "ssr_10": "Output 10",
+          "ssr_11": "Output 11",
+          "ssr_12": "Output 12"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Could not read the device. Check that it is online."
+    }
+  },
+  "selector": {
+    "output_entity_type": {
+      "options": {
+        "switch": "Switch",
+        "light": "Light"
+      }
+    }
+  },
+  "entity": {
+    "light": {
+      "relay": {
+        "name": "Relay {index}"
+      },
+      "ssr_output": {
+        "name": "Output {index}"
+      }
+    },
+    "switch": {
+      "relay": {
+        "name": "Relay {index}"
+      },
+      "ssr_output": {
+        "name": "Output {index}"
+      }
+    },
+    "binary_sensor": {
+      "io_input": {
+        "name": "Input {index}"
+      }
+    },
+    "sensor": {
+      "adc": {
+        "name": "ADC {channel}"
+      }
+    }
+  }
+}
